@@ -2,7 +2,6 @@ class Timer {
 
     constructor(minutes, seconds) {
         this.seconds = Number(seconds) + (Number(minutes) * 60);
-        console.log(this.seconds);
         this.timerId = null;
     }
 
