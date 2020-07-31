@@ -17,8 +17,8 @@ We write a simple countdown timer
 
 ## Lessons learned
  * JavaScript 
-  * using classes
-  * type conversion
-  * `this` for anonymous functions and lambda functions
-  * using times with setInterval
+   * using classes
+   * type conversion
+   * `this` for anonymous functions and lambda functions
+   * using times with setInterval
  
