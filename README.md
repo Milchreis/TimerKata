@@ -11,9 +11,9 @@ We write a simple countdown timer
 
 ## Changelog
  * 2020-07-30
-  * initial project
-  * form with minutes and seconds and some output
-  * basic countdown loop
+   * initial project
+   * form with minutes and seconds and some output
+   * basic countdown loop
 
 ## Lessons learned
  * JavaScript 
