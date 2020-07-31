@@ -28,7 +28,6 @@ class Timer {
 updateTimerUI = function(timer) {
     let showText = document.getElementById("resultText");
     showText.value = timer.print();
-    console.log(timer.print())
 }
 
 startTimer = function() {
