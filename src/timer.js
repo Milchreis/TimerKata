@@ -1,16 +1,31 @@
 class Timer {
 
     constructor(minutes, seconds) {
-        this.minutes = minutes;
-        this.seconds = seconds;
+        this.seconds = seconds + minutes * 60;
+        this.timerId = null;
     }
 
     print() {
-        return `Es sind noch ${this.minutes} Minuten und ${this.seconds} Sekunden`;
+        let minutes = this.seconds / 60;
+        return `Es sind noch ${minutes} Minuten und ${this.seconds - (minutes * 60)} Sekunden`;
+    }
+
+    stop() {
+        clearInterval(this.timerId);
     }
 
     start() {
-        // TODO: start timer
+        this.timerId = setInterval(function () {
+            this.seconds -= 1;
+        }, 1000);
         
     }
+}
+
+startTimer = function() {
+    const minutes = document.getElementById("startMinute").value;
+    const seconds = document.getElementById("startSecond").value;
+
+    const timer = new Timer(minutes, seconds);
+    timer.start()
 }
