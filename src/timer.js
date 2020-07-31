@@ -16,10 +16,20 @@ class Timer {
     }
 
     start() {
-        this.timerId = setInterval(function () {
-            this.seconds -= 1;
+        this.timerId = setInterval(() => {
+            if(this.seconds >= 0) {
+                this.seconds -= 1;
+            } else {
+                this.stop();
+            }
         }, 1000);
     }
+}
+
+updateTimerUI = function(timer) {
+    let showText = document.getElementById("resultText");
+    showText.value = timer.print();
+    console.log(timer.print())
 }
 
 startTimer = function() {
@@ -28,6 +38,8 @@ startTimer = function() {
 
     const timer = new Timer(minutes, seconds);
     timer.start();
-    let showText = document.getElementById("resultText");
-    showText.value = timer.print();
+
+    setInterval(function () {
+        updateTimerUI(timer)
+    }, 1000);
 }
