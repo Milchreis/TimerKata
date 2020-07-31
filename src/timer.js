@@ -11,5 +11,6 @@ class Timer {
 
     start() {
         // TODO: start timer
+        
     }
 }
